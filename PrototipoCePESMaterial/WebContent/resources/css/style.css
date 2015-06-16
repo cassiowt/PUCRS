@@ -1,0 +1,13 @@
+@CHARSET "ISO-8859-1";
+
+body {
+	background-color: #ecebea;
+}
+
+.ui-slidemenu-wrapper {
+	height: 220px !important;
+}
+
+.ui-slidemenu-content {
+	height: 210px !important;
+}

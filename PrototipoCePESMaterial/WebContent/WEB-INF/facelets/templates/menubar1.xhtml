@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core" xmlns:p="http://primefaces.org/ui">
+<h:outputStylesheet library="css" name="css/style.css" />
+
+<ui:composition>
+	<h:form>
+		<p:growl id="messages" showDetail="true" />
+
+		<p:menubar>
+			<p:submenu label="Material">
+				<p:submenu label="Books" icon="fa fa-book">
+					<p:menuitem value="Add Books " url="cadastroLivro.xhtml#" icon="fa fa-book" />
+					<p:menuitem value="Add Author" url="cadastroAutor.xhtml#" icon="fa fa-user" />
+					<p:menuitem value="Add Publishing" update="messages" icon="fa fa-edit" />
+				</p:submenu>
+				<p:submenu label="Furniture of Office" icon="fa fa-edit">
+				</p:submenu>
+				<p:menuitem value="Reports" update="messages" icon="fa fa-print" />
+				<p:menuitem value="Save" update="messages" icon="fa fa-save" />
+			</p:submenu>
+			<p:submenu label="Diversos">
+				<p:submenu label="Links">
+					<p:menuitem value="FACIN" url="https://www.inf.pucrs.br/facin/" />
+					<p:menuitem value="PUCRS" url="http://www.pucrs.br" />
+				</p:submenu>
+				<p:menuitem value="Others" />
+			</p:submenu>
+			<p:menuitem value="Exit" ajax="false" url="index.xhtml#" icon="fa fa-close" />
+			<f:facet name="options">
+				<p:commandButton style="margin-right:10px" type="button" value="Logout: Cassiowt" icon="ui-icon-extlink" />
+			</f:facet>
+		</p:menubar>
+	</h:form>
+</ui:composition>
+</html>
+
