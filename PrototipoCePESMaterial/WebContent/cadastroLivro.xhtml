@@ -8,30 +8,36 @@
 	<ui:define name="content">
 		<h:body>
 			<p:growl id="msgs" showDetail="true" />
+			<p:outputLabel value="Material Permanente" />
+			<p:inputText value="Livro / Revista" disabled="true" />
+			<p:outputLabel value="Codigo" />
+			<p:inputText value="1" disabled="true" size="5" />
+
 			<h:form>
 				<p:accordionPanel>
-					<p:tab title="Livros">
+					<p:tab title="Livro">
 						<h:panelGrid columns="2" cellpadding="10">
 							<p:outputLabel value="Titulo" />
 							<p:inputText placeholder="Programando com Java.." />
 							<p:outputLabel value="Subtitulo" />
 							<p:inputText placeholder="em..." />
 							<p:outputLabel value="Autor:" for="event" />
-							<p:autoComplete id="event" value="#{dados.dados}" completeMethod="#{dados.completeText}">
+							<p:autoComplete id="event" value="#{dados.nome}" completeMethod="#{dados.completeText}">
 								<p:ajax event="itemSelect" listener="#{dados.onItemSelect}" update="msgs" />
 							</p:autoComplete>
 						</h:panelGrid>
 					</p:tab>
 					<p:tab title="Resumo">
 						<h:panelGrid columns="2" cellpadding="10">
-							<h:outputText value="" />
+							<p:editor value="Descreva o resumo do livro" />
 						</h:panelGrid>
 					</p:tab>
 					<p:tab title="Emprestimo">
-						<h:panelGrid columns="2" cellpadding="10">
-							<!-- <p:graphicImage name="/images/3.jpg" /> -->
-
-						</h:panelGrid>
+						<p:dataTable var="emp" value="#{dados.emprestimos}">
+							<p:column headerText="Lista Emprestimos">
+								<h:outputText value="#{emp.nome}" />
+							</p:column>
+						</p:dataTable>
 					</p:tab>
 				</p:accordionPanel>
 				<p:commandButton value="Save" update="msgs" icon="fa fa-save" />

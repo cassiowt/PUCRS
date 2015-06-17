@@ -14,30 +14,49 @@ import org.primefaces.event.SelectEvent;
 @SessionScoped
 public class Dados {
 
-	private String dados;
+	private String nome;
 
-	public String getDados() {
-		return dados;
+	public Dados() {
 	}
 
-	public void setDados(String dados) {
-		this.dados = dados;
+	public Dados(String s) {
+		this.nome = s;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String dados) {
+		this.nome = dados;
 	}
 
 	public List<String> completeText(String query) {
 		List<String> results = new ArrayList<String>();
 		for (int i = 0; i < 10; i++) {
-			results.add(query +"__"+ i);
+			results.add(query + "__" + i);
 		}
 
 		return results;
 	}
 
 	public void onItemSelect(SelectEvent event) {
-		FacesContext.getCurrentInstance()
-				.addMessage(
-						null,
-						new FacesMessage("Dado Selecionado", event.getObject()
-								.toString()));
+		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Dado Selecionado", event.getObject().toString()));
 	}
+
+	public List<Dados> getEmprestimos() {
+		ArrayList<Dados> emprestimos = new ArrayList<Dados>();
+		emprestimos.add(new Dados("Aluno:Bento Gonçalves Data Emprestimo:01/01/2015  Data Devolução:Indefinido"));
+		emprestimos.add(new Dados("Aluno:Anita Garibaldi Data Emprestimo:01/02/2015  Data Devolução:Indefinido"));
+
+		return emprestimos;
+	}
+
+	// Map<Integer, Dados> emprestimos= new HashMap<Integer, Dados>();
+	// {
+	// emprestimos.put(1, new
+	// Dados("Aluno:Bento Gonçalves Data Emprestimo: 01/01/2015  Data Devolução:Indefinido"));
+	// emprestimos.put(2, new
+	// Dados("Aluno:Anita Garibaldi Data Emprestimo: 01/02/2015  Data Devolução:Indefinido"));
+	// }
 }
