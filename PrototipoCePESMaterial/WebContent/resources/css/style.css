@@ -11,3 +11,7 @@ body {
 .ui-slidemenu-content {
 	height: 210px !important;
 }
+
+.ui-icon.fa {
+    text-indent:0px
+}
