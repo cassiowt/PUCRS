@@ -14,19 +14,18 @@
 					<p:menuitem value="#{msg.addBooks}" url="cadastroLivro.xhtml#" icon="fa fa-book" />
 					<p:menuitem value="#{msg.addAuthor}" url="cadastroAutor.xhtml#" icon="fa fa-user" style="width:214px"/>
 				</p:submenu>
-				<p:submenu label="Furniture of Office" icon="fa fa-edit">
+				<p:submenu label="#{msg.mobile}" icon="fa fa-edit">
 				</p:submenu>
-				<p:menuitem value="Reports" update="messages" icon="fa fa-print" />
-				<p:menuitem value="Save" update="messages" icon="fa fa-save" />
+				<p:menuitem value="#{msg.reports}" update="messages" icon="fa fa-print" />
 			</p:submenu>
-			<p:submenu label="Diversos">
+			<p:submenu label="#{msg.many}">
 				<p:submenu label="Links">
 					<p:menuitem value="FACIN" url="https://www.inf.pucrs.br/facin/" />
 					<p:menuitem value="PUCRS" url="http://www.pucrs.br" />
 				</p:submenu>
-				<p:menuitem value="Others" />
+				<p:menuitem value="#{msg.others}" />
 			</p:submenu>
-			<p:menuitem value="Exit" ajax="false" url="index.xhtml#" icon="fa fa-close" />
+			<p:menuitem value="#{msg.exit}" ajax="false" url="index.xhtml#" icon="fa fa-close" />
 			<f:facet name="options">
 				<p:commandButton style="margin-right:10px" type="button" value="Logout: Cassiowt" icon="ui-icon-extlink" />
 			</f:facet>
