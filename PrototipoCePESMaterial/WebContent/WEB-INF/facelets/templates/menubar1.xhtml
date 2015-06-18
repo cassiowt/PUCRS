@@ -8,12 +8,11 @@
 <ui:composition>
 	<h:form>
 		<p:growl id="messages" showDetail="true" />
-		<p:menubar>
+		<p:menubar >
 			<p:submenu label="Material">
 				<p:submenu label="Books" icon="fa fa-book">
 					<p:menuitem value="Add Books " url="cadastroLivro.xhtml#" icon="fa fa-book" />
-					<p:menuitem value="Add Author" url="cadastroAutor.xhtml#" icon="fa fa-user" />
-					<p:menuitem value="Add Publishing" update="messages" icon="fa fa-edit" />
+					<p:menuitem value="Add Author or Publishing" url="cadastroAutor.xhtml#" icon="fa fa-user" style="width:214px"/>
 				</p:submenu>
 				<p:submenu label="Furniture of Office" icon="fa fa-edit">
 				</p:submenu>
