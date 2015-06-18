@@ -8,6 +8,11 @@
 	<ui:define name="content">
 		<h:body>
 			<p:growl id="msgs" showDetail="true" />
+			<p:panelGrid columns="3" styleClass="ui-noborder" style="">
+				<p:outputLabel value="Codigo" style="color:orange"/>
+				<p:inputText value="0000"  size="5" />
+				<p:commandButton value="Search" update="msgs" icon="fa fa-search" />
+			</p:panelGrid>
 			<h:form>
 				<p:accordionPanel>
 					<p:tab title="Autores">
@@ -18,7 +23,12 @@
 							<p:inputText placeholder="..." />
 						</h:panelGrid>
 					</p:tab>
-
+					<p:tab title="Editora">
+						<h:panelGrid columns="2" cellpadding="10">
+							<p:outputLabel value="Nome" />
+							<p:inputText placeholder="..." />
+						</h:panelGrid>
+					</p:tab>
 				</p:accordionPanel>
 				<p:commandButton value="Save" update="msgs" icon="fa fa-save" />
 				<p:commandButton value="Cancel" update="msgs" icon="fa fa-close" />

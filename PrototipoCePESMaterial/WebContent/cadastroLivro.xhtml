@@ -9,11 +9,12 @@
 		<h:body>
 			<p:growl id="msgs" showDetail="true" />
 
-			<p:panelGrid columns="4" styleClass="ui-noborder" style="">
+			<p:panelGrid columns="5" styleClass="ui-noborder" style="">
 				<p:outputLabel value="Codigo" style="color:orange"/>
-				<p:inputText value="1" disabled="true" size="5" />
+				<p:inputText value="0000"  size="5" />
 				<p:outputLabel value="Material " style="color:orange"/>
 				<p:inputText value="Livro / Revista " disabled="true" />
+				<p:commandButton value="Search" update="msgs" icon="fa fa-search" />
 			</p:panelGrid>
 
 			<h:form>

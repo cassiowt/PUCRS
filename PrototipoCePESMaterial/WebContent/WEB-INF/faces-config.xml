@@ -7,7 +7,7 @@
 	<application>
 		<message-bundle>com.ages.prototipo.mensages</message-bundle>
 		<resource-bundle>
-			<base-name>com.ages.prototipo.mensages</base-name>
+			<base-name>com.ages.prototipo.messages</base-name>
 			<var>msg</var>
 		</resource-bundle>
 	</application>

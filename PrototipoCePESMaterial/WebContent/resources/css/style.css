@@ -12,6 +12,6 @@ body {
 	height: 210px !important;
 }
 
-.ui-icon.fa {
-    text-indent:0px
+.ui-widget .ui-icon.fa, .ui-icon.fa {
+    text-indent:-9px
 }

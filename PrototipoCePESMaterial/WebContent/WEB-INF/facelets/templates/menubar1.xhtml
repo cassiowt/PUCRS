@@ -9,10 +9,10 @@
 	<h:form>
 		<p:growl id="messages" showDetail="true" />
 		<p:menubar >
-			<p:submenu label="Material">
-				<p:submenu label="Books" icon="fa fa-book">
-					<p:menuitem value="Add Books " url="cadastroLivro.xhtml#" icon="fa fa-book" />
-					<p:menuitem value="Add Author or Publishing" url="cadastroAutor.xhtml#" icon="fa fa-user" style="width:214px"/>
+			<p:submenu label="#{msg.labelMaterial}">
+				<p:submenu label="#{msg.labelBooks}" icon="fa fa-book">
+					<p:menuitem value="#{msg.addBooks}" url="cadastroLivro.xhtml#" icon="fa fa-book" />
+					<p:menuitem value="#{msg.addAuthor}" url="cadastroAutor.xhtml#" icon="fa fa-user" style="width:214px"/>
 				</p:submenu>
 				<p:submenu label="Furniture of Office" icon="fa fa-edit">
 				</p:submenu>
