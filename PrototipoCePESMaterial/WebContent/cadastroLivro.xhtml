@@ -10,10 +10,10 @@
 			<p:growl id="msgs" showDetail="true" />
 
 			<p:panelGrid columns="5" styleClass="ui-noborder" style="">
-				<p:outputLabel value="Codigo" style="color:orange"/>
+				<p:outputLabel value="#{msg.labelId}" style="color:orange"/>
 				<p:inputText value="0000"  size="5" />
-				<p:outputLabel value="Material " style="color:orange"/>
-				<p:inputText value="Livro / Revista " disabled="true" />
+				<p:outputLabel value="#{msg.labelMaterial} " style="color:orange"/>
+				<p:inputText value="#{msg.labelBookMagazine} " disabled="true" />
 				<p:commandButton value="Search" update="msgs" icon="fa fa-search" />
 			</p:panelGrid>
 
@@ -24,7 +24,7 @@
 							<p:outputLabel value="Titulo" />
 							<p:inputText placeholder="Programando com Java.." />
 							<p:outputLabel value="Subtitulo" />
-							<p:inputText placeholder="em..." />
+							<p:inputText placeholder="..." />
 							<p:outputLabel value="Autor:" for="event" />
 							<p:autoComplete id="event" value="#{dados.nome}" completeMethod="#{dados.completeText}">
 								<p:ajax event="itemSelect" listener="#{dados.onItemSelect}" update="msgs" />
