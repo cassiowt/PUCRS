@@ -61,6 +61,12 @@
 			<artifactId>all-themes</artifactId>
 			<version>1.0.8</version>
 		</dependency>
+		<!-- Hibernate -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>4.3.8.Final</version>
+		</dependency>
 
 	</dependencies>
 </project>

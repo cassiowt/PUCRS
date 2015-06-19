@@ -1,0 +1,30 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<ui:composition
+	template="/WEB-INF/facelets/templates/defaultLayout.xhtml">
+	<ui:define name="Login">
+		<h:outputText value="#{msg.titleLivro}" />
+	</ui:define>
+	<ui:define name="content">
+		<h:body>
+			<p:growl id="msgs" showDetail="true" />
+			<h:form>
+				<p:panelGrid columns="1" styleClass="ui-noborder" layout="grid">
+					<p:outputLabel value="Usuario" style="color:orange" />
+					<p:inputText value="#{login.usuario}" size="20" />
+					<p:outputLabel value="Senha"  style="color:orange"/>
+					<p:password value="#{login.senha}" />
+
+				</p:panelGrid>
+				<p:commandButton value="Login" action="#{login.valida}" update="msgs" icon="fa fa-save" />
+				<p:commandButton value="Cancel" update="msgs" icon="fa fa-close" />
+
+			</h:form>
+		</h:body>
+	</ui:define>
+</ui:composition>
+</html>

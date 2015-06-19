@@ -11,12 +11,14 @@
 		<p:menubar >
 			<p:submenu label="#{msg.labelMaterial}">
 				<p:submenu label="#{msg.labelBooks}" icon="fa fa-book">
-					<p:menuitem value="#{msg.addBooks}" url="cadastroLivro.xhtml#" icon="fa fa-book" />
-					<p:menuitem value="#{msg.addAuthor}" url="cadastroAutor.xhtml#" icon="fa fa-user" style="width:214px"/>
+					<p:menuitem value="#{msg.addBooks}" url="cadastroLivro.xhtml#" icon="fa fa-plus" />
+					<p:menuitem value="#{msg.addAuthor}" url="cadastroAutor.xhtml#" icon="fa fa-plus" style="width:214px"/>
 				</p:submenu>
-				<p:submenu label="#{msg.mobile}" icon="fa fa-edit">
+				<p:submenu label="#{msg.labelElectronic}" icon="fa fa-edit">
 				</p:submenu>
-				<p:menuitem value="#{msg.reports}" update="messages" icon="fa fa-print" />
+				<p:menuitem value="#{msg.reports}" actionListener="#{dados.naoImplementado}"  update="messages" icon="fa fa-print" >
+					<f:param name="titulo" value="Relatorios"/>  
+				</p:menuitem>
 			</p:submenu>
 			<p:submenu label="#{msg.many}">
 				<p:submenu label="Links">
@@ -27,7 +29,8 @@
 			</p:submenu>
 			<p:menuitem value="#{msg.exit}" ajax="false" url="index.xhtml#" icon="fa fa-close" />
 			<f:facet name="options">
-				<p:commandButton style="margin-right:10px" type="button" value="Logout: Cassiowt" icon="ui-icon-extlink" />
+				<p:button style="margin-right:10px" type="button" value="#{login.mensagemBotaoLogin}"   outcome="#{login.iniciar}" icon="ui-icon-extlink"/>
+				<p:outputLabel value="#{login.mensagemLogin}" />
 			</f:facet>
 		</p:menubar>
 	</h:form>
