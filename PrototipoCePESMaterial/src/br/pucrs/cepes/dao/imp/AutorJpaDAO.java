@@ -42,8 +42,9 @@ public class AutorJpaDAO implements GenericDAO<Autor> {
 		
 	}
 
+
 	@Override
-	public void listar() {
+	public void consultar(Autor obj) {
 		// TODO Auto-generated method stub
 		
 	}
