@@ -1,10 +1,10 @@
-package br.com.pucrs.cepes.dao.imp;
+package br.pucrs.cepes.dao.imp;
 
 import javax.persistence.EntityManager;
 
-import br.com.pucrs.cepes.dao.GenericDAO;
-import br.com.pucrs.cepes.util.JpaUtil;
+import br.pucrs.cepes.dao.GenericDAO;
 import br.pucrs.cepes.model.material.Autor;
+import br.pucrs.cepes.util.JpaUtil;
 
 public class AutorJpaDAO implements GenericDAO<Autor> {
 

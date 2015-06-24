@@ -1,4 +1,4 @@
-package br.com.pucrs.cepes.util;
+package br.pucrs.cepes.util;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

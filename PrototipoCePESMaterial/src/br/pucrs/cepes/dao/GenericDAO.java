@@ -1,4 +1,4 @@
-package br.com.pucrs.cepes.dao;
+package br.pucrs.cepes.dao;
 
 public interface GenericDAO<T> {
 
