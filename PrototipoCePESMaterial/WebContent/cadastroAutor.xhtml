@@ -9,9 +9,9 @@
 		<h:body>
 			<p:growl id="msgs" showDetail="true" />
 			<p:panelGrid columns="3" styleClass="ui-noborder" style="">
-				<p:outputLabel value="Codigo" style="color:orange"/>
+				<p:outputLabel value="#{msg.labelId}" style="color:orange"/>
 				<p:inputText value="0000"  size="5" />
-				<p:commandButton value="Search" update="msgs" icon="fa fa-search" />
+				<p:commandButton value="#{msg.labelsSarch}" update="msgs" icon="fa fa-search" />
 			</p:panelGrid>
 			<h:form>
 				<p:accordionPanel>
